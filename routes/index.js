@@ -287,7 +287,7 @@ router.get('/ext/summary', function(req, res) {
     if (difficulty['proof-of-work']) {
             if (settings.index.difficulty == 'Hybrid') {
               difficultyHybrid = 'POS: ' + difficulty['proof-of-stake'];
-              difficulty = 'POW: ' + difficulty['proof-of-work'];
+              difficulty = 'POW: ' + difficulty['proof-of-work'].toFixed(0);
             } else if (settings.index.difficulty == 'POW') {
               difficulty = difficulty['proof-of-work'];
             } else {
