@@ -9,14 +9,14 @@ var express = require('express')
 
 var zsock = zmq.socket('pub');
 try {
-	zsock.bindSync('tcp://127.0.0.1:30611');
-	console.log('Publisher bound to port 30611');
+    zsock.bindSync('tcp://127.0.0.1:30611');
+    console.log('Publisher bound to port 30611');
 } catch (err) {
         console.log("creating zsock failed", err);
 };
 
 function route_zmq_send(res, data) {
-	zsock.send(['rawtx', data]);
+    zsock.send(['rawtx', data]);
 }
 
 function route_get_block(res, blockhash) {
@@ -331,6 +331,6 @@ router.get('/ext/summary', function(req, res) {
 });
 
 router.get('/ext/zmqsend/:data', function(req, res) {
-	route_zmq_send(res, req.param('data'));	
+    route_zmq_send(res, req.param('data'));
 });
 module.exports = router;
