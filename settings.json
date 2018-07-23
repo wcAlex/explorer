@@ -48,19 +48,19 @@
   "wallet": {
     "host": "127.0.0.1",
     "port": 9977,
-    "user": "peercoinrpc",
+    "user": "cnycoinrpc",
     "pass": "J4oxViM8jsC6ySbqoweniVML1t65LtYmbuHB7DsFYdH"
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 5,
 
   // language settings
   "locale": "locale/en.json",
 
   // menu settings
   "display": {
-    "api": true,
+    "api": false,
     "markets": false,
     "richlist": true,
     "twitter": true,
