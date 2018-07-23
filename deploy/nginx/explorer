@@ -1,4 +1,5 @@
 server {
+    listen 3002;
     server_name 54.203.195.52 127.0.0.1;
 
     location / {

@@ -25,20 +25,5 @@
   },
   "devDependencies": {
     "jasmine": "~2.1.0"
-  },
-  "description": "Iquidus Explorer - 1.6.1 ================",
-  "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wcAlex/explorer.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wcAlex/explorer/issues"
-  },
-  "homepage": "https://github.com/wcAlex/explorer#readme"
+  }
 }

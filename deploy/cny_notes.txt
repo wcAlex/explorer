@@ -1,0 +1,60 @@
+	1. Set up mongo, prepare DB
+	2. Install Node
+	3. Setup node js and start config
+	4. Setup PM2 or Forever to .
+	5. Setup Nginx,  (Use nginx as a HTTP Reverse Proxy), on different port or /explorer?
+
+
+# install mongo
+Install & verify
+﻿https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+﻿https://hevodata.com/blog/install-mongodb-on-ubuntu/
+
+# install npm
+sudo apt install npm
+﻿﻿apt install nodejs-legacy
+﻿npm install --production
+
+sudo apt-get install nodejs
+sudo apt-get install nodejs-legacy
+sudo apt-get install npm
+
+# run server
+﻿https://github.com/wcAlex/explorer
+
+# setup nginx 
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install nginx -y
+sudo systemctl status nginx    # To check the status of nginx
+sudo systemctl start nginx     # To start nginx
+sudo systemctl enable nginx
+
+# install pm2 to run explorer as background
+sudo npm install pm2 -g
+# update node to v4.5
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+ (command -v nvm) to confirm nvm is installed, close and open a new terminal
+nvm install v4.5.0
+https://github.com/creationix/nvm/blob/master/README.md
+https://futurestud.io/tutorials/pm2-use-npm-to-start-your-app
+
+pm2 start npm -- start
+
+http://54.203.195.52:3001/
+
+# Forever to run explorer as daemon
+chmod 755 -R .
+npm install forever -g
+cd /home/ubuntu/workspace/explorer
+forever start --stack-size=10000 ./bin/cluster
+forever list
+ 
+# TO DO:
+Finalize Nginx config and CnyCoin conf file after this!!
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
+
+# crontab jobs
+crontab -e
+*/2 * * * * cd /home/ubuntu/workspace/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
+*/2 * * * * cd /home/ubuntu/workspace/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
+*/5 * * * * cd /home/ubuntu/workspace/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
