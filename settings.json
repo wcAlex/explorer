@@ -5,12 +5,12 @@
 */
 {
   // name your instance!
-  "title": "CnyCoin Explorer",
+  "title": "CnyFund Explorer",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "CnyCoin",
+  "coin": "CnyFund",
 
   // coin symbol
   "symbol": "CNY",
@@ -47,8 +47,8 @@
   // wallet settings
   "wallet": {
     "host": "127.0.0.1",
-    "port": 9977,
-    "user": "cnycoinrpc",
+    "port": 18189,
+    "user": "cnyfundrpc",
     "pass": "J4oxViM8jsC6ySbqoweniVML1t65LtYmbuHB7DsFYdH"
   },
 
@@ -79,12 +79,12 @@
   },
 
   // ensure links on API page are valid
-  "api": {
-    "blockindex": 1,
-    "blockhash": "00000054fb199c31b37344ef6f8bfd15f8d202700d56db4cdb2cec17ca28d9b3",
-    "txhash": "caf46af3b4fb227e01065da37b01b19caf8b9de72826618b0d1a887b9e009bf9",
-    "address": "PJQbFhK9AdHkv9vR5qEkGFRcBDjPcL89Cs"
-  },
+  // "api": {
+  //   "blockindex": 1,
+  //   "blockhash": "00000054fb199c31b37344ef6f8bfd15f8d202700d56db4cdb2cec17ca28d9b3",
+  //   "txhash": "caf46af3b4fb227e01065da37b01b19caf8b9de72826618b0d1a887b9e009bf9",
+  //   "address": "PJQbFhK9AdHkv9vR5qEkGFRcBDjPcL89Cs"
+  // },
 
   // market settings
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
@@ -120,8 +120,8 @@
   "googleplus": "yourgooglepluspage",
 
   //genesis
-  "genesis_tx": "4e2830f4fce41fdf53a0da3416cf88655a11a3b616d9bf8a0512738231422333",
-  "genesis_block": "66fb83b7fc0c6b1faf48451eac49cd4cdd3299f6e71cd9c32a9c3512013a9756",
+  "genesis_tx": "b746b69f230fc846846f232bd5d496d8ac405238d5b919a749835f3938a67dcd",
+  "genesis_block": "52a542862f874c62249c3ccca99ad6170344686a5f350ffde5b3fd7cf7081fdd",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
@@ -138,7 +138,7 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "COINBASE",
+  "supply": "BALANCES",
 
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
